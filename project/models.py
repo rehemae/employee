@@ -19,11 +19,12 @@ class Employee(models.Model):
    )
     position= models.CharField(max_length=30,choices=POSITION_CHOICES,null=True)
     salary=models.IntegerField()
-    supervisors=models.CharField(max_length=20,null=True)
+    supervisor=models.CharField(max_length=20,null=True)
+    employee_code=models.CharField(max_length=20,null=True)
 
-class Login(models.Model):
-    user_name=models.CharField(max_length=20,null=True)
-    password=models.CharField(max_length=20,null=True)
+# class Login(models.Model):
+#     user_name=models.CharField(max_length=20,null=True)
+#     password=models.CharField(max_length=20,null=True)
 
-    # def __str__(self):
-    #  return self.first_name
+    def __str__(self):
+     return self.first_name
